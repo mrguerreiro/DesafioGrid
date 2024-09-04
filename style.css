@@ -1,0 +1,64 @@
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template: 
+      "topo topo topo topo topo"
+      "sidebar video1 video2 video3 video4"250px
+      "sidebar video5 video6 video7 video8" 250px
+      "sidebar video9 video10 video11 video12" 250px
+  /1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.topo {
+  grid-area: topo;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.video1 {
+  grid-area: video1;
+}
+
+.video2 {
+  grid-area: video2;
+}
+
+.video3 {
+  grid-area: video3;
+}
+
+.video4 {
+  grid-area: video4;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-areas: 
+          "topo topo topo topo topo"
+          "video1 video2 video3 video4 video5"
+          "video6 video7 video8 video9 video10";
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      grid-template-areas: 
+          "topo"
+          "video1"
+          "video2"
+          "video3"
+          "video4"
+          "video5"
+          "video6"
+          "video7"
+          "video8"
+          "video9"
+          "video10";
+      grid-template-columns: 1fr;
+  }
+}
